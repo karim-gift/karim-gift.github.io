@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  #game-container img {
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+  
+  #game-container p {
+    font-size: 18px;
+    margin: 15px;
+  }
+  
+  #game-container input {
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  #game-container button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #d42426;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

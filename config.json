@@ -1,0 +1,73 @@
+{
+    "pages": [
+      {
+        "id": "welcome",
+        "type": "input",
+        "image": "assets/welcome.png",
+        "text": "Bienvenue dans la Chasse aux Codes ! Entre ton prénom pour commencer.",
+        "input_placeholder": "Ton prénom",
+        "button_text": "Commencer",
+        "next_page": "page_1"
+      },
+      {
+        "id": "page_1",
+        "type": "challenge",
+        "image": "assets/challenge1.png",
+        "text": "Additionne les chiffres dans cette scène : 4 + 3 + 7.",
+        "mp3": "assets/page_1.mp3",
+        "input_placeholder": "Entre la réponse",
+        "correct_answer": 14,
+        "button_text": "Valider",
+        "next_page": "page_2"
+      },
+      {
+        "id": "page_2",
+        "type": "challenge",
+        "image": "assets/challenge2.png",
+        "text": "Trouve le numéro d’unicité dans l’ADN.",
+        "mp3": "assets/page_2.mp3",
+        "input_placeholder": "Entre la réponse",
+        "correct_answer": 23,
+        "button_text": "Valider",
+        "next_page": "page_3"
+      },
+      {
+        "id": "page_3",
+        "type": "challenge",
+        "image": "assets/challenge3.png",
+        "text": "Compte les applaudissements dans la salle.",
+        "mp3": "assets/page_3.mp3",
+        "input_placeholder": "Entre la réponse",
+        "correct_answer": 101,
+        "button_text": "Valider",
+        "next_page": "result"
+      },
+      {
+        "id": "result",
+        "type": "result",
+        "image": "assets/congrats.png",
+        "text": "Félicitations ! Voici ton spectacle : ADN. Tu peux aussi choisir parmi les autres spectacles ci-dessous.",
+        "gallery": [
+          {
+            "title": "L’Heure des assassins",
+            "image": "assets/spectacle1.png",
+            "description": "Une comédie policière riche en rebondissements.",
+            "youtube": "https://www.youtube.com/watch?v=JKH0A32d8jM"
+          },
+          {
+            "title": "ADN",
+            "image": "assets/spectacle2.png",
+            "description": "Un thriller captivant.",
+            "youtube": "https://www.youtube.com/watch?v=M-Vqf0VY39I"
+          },
+          {
+            "title": "La Claque",
+            "image": "assets/spectacle3.png",
+            "description": "Drôle et musical.",
+            "youtube": "https://www.youtube.com/watch?v=i8u2BBycZyc"
+          }
+        ]
+      }
+    ]
+  }
+      
