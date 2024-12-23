@@ -35,7 +35,7 @@ export function IntroPage({ onContinue, userName, onRestart }: IntroPageProps) {
     <div className="min-h-screen bg-with-overlay flex items-center justify-center p-4">
       <div className="text-content bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
-          Welcome, {userName}!
+          Joyeux Noël, {userName}!
         </h1>
         
         <div className="space-y-6">
