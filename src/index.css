@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bg-with-overlay {
-    background-image: url('assets/images/background_christmas.png');
+    background-image: url('https://i.ibb.co/nndzG4d/DALL-E-2024-12-23-03-07-02-A-luxurious-Christmas-themed-background-for-a-webpage-featuring-a-rich-da.webp');
     background-size: cover;
     background-position: center;
     position: relative;
