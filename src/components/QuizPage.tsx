@@ -52,8 +52,8 @@ export function QuizPage({ currentQuestionIndex, onAnswer, onRestart }: QuizPage
   }, [currentQuestionIndex]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-700 to-green-800 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
+    <div className="min-h-screen bg-with-overlay flex items-center justify-center p-4">
+      <div className="text-content bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
         <div className="relative mb-6">
           <img
             src={question.imageUrl}

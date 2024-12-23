@@ -32,8 +32,8 @@ export function IntroPage({ onContinue, userName, onRestart }: IntroPageProps) {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-700 to-green-800 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
+    <div className="min-h-screen bg-with-overlay flex items-center justify-center p-4">
+      <div className="text-content bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
           Welcome, {userName}!
         </h1>

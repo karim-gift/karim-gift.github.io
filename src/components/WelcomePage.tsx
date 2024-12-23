@@ -19,8 +19,10 @@ export function WelcomePage({ onSubmit }: WelcomePageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-700 to-green-800 flex items-center justify-center p-4 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full bg-[url('/path/to/snowflakes.png')] bg-cover bg-center animate-float"></div>
+
+
+    <div className="min-h-screen bg-with-overlay flex items-center justify-center p-4">
+      <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center animate-float"></div>
       <div className="bg-white rounded-lg shadow-xl p-8 w-full max-w-md relative z-10">
         <div className="flex justify-center mb-6">
           <Gift className="w-16 h-16 text-green-600" />
