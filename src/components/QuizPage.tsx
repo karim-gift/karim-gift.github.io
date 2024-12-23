@@ -31,7 +31,7 @@ export function QuizPage({ currentQuestionIndex, onAnswer, onRestart }: QuizPage
     if (answer.trim().toUpperCase() === question.answer) {
       onAnswer(answer);
     } else {
-      setError('Incorrect code. Try again!');
+      setError('Code incorrect! recommence');
     }
   };
 

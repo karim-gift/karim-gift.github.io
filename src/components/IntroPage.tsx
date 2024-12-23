@@ -40,16 +40,7 @@ export function IntroPage({ onContinue, userName, onRestart }: IntroPageProps) {
         
         <div className="space-y-6">
           <div className="bg-gray-50 p-4 rounded-lg">
-            <h2 className="font-semibold mb-2">Theme des questions</h2>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Sherlock Holmes mysteries</li>
-              <li>DNA puzzles</li>
-              <li>Christmas shows</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h2 className="font-semibold mb-2">Rules:</h2>
+            <h2 className="font-semibold mb-2">Instructions:</h2>
             <ul className="list-disc pl-5 space-y-2">
               <li>Chaque question a un code unique à déchiffrer</li>
               <li>Écoutez attentivement les indices audio</li>
