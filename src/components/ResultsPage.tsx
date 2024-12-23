@@ -4,9 +4,10 @@ import { Play } from 'lucide-react';
 
 interface ResultsPageProps {
   userName: string;
+  onRestart: () => void; // Ajouter cette ligne
 }
 
-export function ResultsPage({ userName }: ResultsPageProps) {
+export function ResultsPage({ userName, onRestart }: ResultsPageProps) {
   const [selectedShow, setSelectedShow] = useState<string | null>(null);
 
   return (
@@ -58,6 +59,13 @@ export function ResultsPage({ userName }: ResultsPageProps) {
             </div>
           ))}
         </div>
+        <br></br>
+        <button
+          onClick={onRestart}
+          className="mb-8 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors"
+        >
+          Recommencer
+        </button>
       </div>
     </div>
   );
