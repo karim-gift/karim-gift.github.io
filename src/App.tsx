@@ -50,18 +50,28 @@ function App() {
     });
   };
 
+  const handleRestart = () => {
+    setState({
+      currentStep: 'intro',
+      userName: state.userName,
+      currentQuestionIndex: 0,
+      answers: [],
+    });
+  };
+
   return (
     <div className="min-h-screen">
       {state.currentStep === 'welcome' && (
         <WelcomePage onSubmit={handleNameSubmit} />
       )}
       {state.currentStep === 'intro' && (
-        <IntroPage onContinue={handleIntroComplete} userName={state.userName} />
+        <IntroPage onContinue={handleIntroComplete} userName={state.userName} onRestart={handleRestart} />
       )}
       {state.currentStep === 'quiz' && (
         <QuizPage
           currentQuestionIndex={state.currentQuestionIndex}
           onAnswer={handleAnswer}
+          onRestart={handleRestart}
         />
       )}
       {state.currentStep === 'results' && (

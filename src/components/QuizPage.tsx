@@ -5,9 +5,10 @@ import { Volume2, VolumeX } from 'lucide-react';
 interface QuizPageProps {
   currentQuestionIndex: number;
   onAnswer: (answer: string) => void;
+  onRestart: () => void; // Ajouter cette ligne
 }
 
-export function QuizPage({ currentQuestionIndex, onAnswer }: QuizPageProps) {
+export function QuizPage({ currentQuestionIndex, onAnswer, onRestart }: QuizPageProps) {
   const [answer, setAnswer] = useState('');
   const [error, setError] = useState('');
   const [isPlaying, setIsPlaying] = useState(true);
@@ -34,9 +35,20 @@ export function QuizPage({ currentQuestionIndex, onAnswer }: QuizPageProps) {
     }
   };
 
+  const handleRestart = () => {
+    window.location.reload();
+  };
+
   useEffect(() => {
     setAnswer('');
     setError('');
+  }, [currentQuestionIndex]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.load();
+      audioRef.current.play();
+    }
   }, [currentQuestionIndex]);
 
   return (
@@ -69,7 +81,7 @@ export function QuizPage({ currentQuestionIndex, onAnswer }: QuizPageProps) {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="answer" className="block text-sm font-medium text-gray-700">
-              Enter the Code
+              Saisir le code
             </label>
             <input
               type="text"
@@ -93,7 +105,16 @@ export function QuizPage({ currentQuestionIndex, onAnswer }: QuizPageProps) {
           </button>
         </form>
 
-        <audio ref={audioRef} autoPlay loop>
+        <button
+          onClick={onRestart}
+          className="w-full py-3 px-4 mt-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors"
+        >
+          Restart Quiz
+        </button>
+
+        <audio ref={audioRef} autoPlay>
+          {/* ref: référence à l'élément audio pour contrôler la lecture via React */}
+          {/* autoPlay: démarre automatiquement la lecture de l'audio */}
           <source src={question.mp3Url} type="audio/mpeg" />
         </audio>
       </div>

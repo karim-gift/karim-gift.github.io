@@ -4,9 +4,10 @@ import { Music, SkipForward } from 'lucide-react';
 interface IntroPageProps {
   onContinue: () => void;
   userName: string;
+  onRestart: () => void; // Ajouter cette ligne
 }
 
-export function IntroPage({ onContinue, userName }: IntroPageProps) {
+export function IntroPage({ onContinue, userName, onRestart }: IntroPageProps) {
   const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -80,10 +81,17 @@ export function IntroPage({ onContinue, userName }: IntroPageProps) {
           >
             Start Quiz
           </button>
+
+          <button
+            onClick={onRestart}
+            className="w-full py-3 px-4 mt-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors"
+          >
+            Restart Quiz
+          </button>
         </div>
 
-        <audio ref={audioRef} autoPlay loop>
-          <source src="https://file-examples.com/storage/fefaeec240676402c9bdb74/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg" />
+        <audio ref={audioRef} autoPlay>
+          <source src="audio/Intro.mp3" type="audio/mpeg" />
         </audio>
       </div>
     </div>
