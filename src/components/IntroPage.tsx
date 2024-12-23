@@ -55,13 +55,13 @@ export function IntroPage({ onContinue, userName, onRestart }: IntroPageProps) {
               className="flex items-center space-x-2 text-green-600 hover:text-green-700"
             >
               <Music className="w-5 h-5" />
-              <span>{isPlaying ? 'Pause Music' : 'Play Music'}</span>
+              <span>{isPlaying ? 'Pause Audio' : 'Ecouter Watson'}</span>
             </button>
             <button
               onClick={onContinue}
               className="flex items-center space-x-2 text-green-600 hover:text-green-700"
             >
-              <span>Skip</span>
+              <span>Ignorer</span>
               <SkipForward className="w-5 h-5" />
             </button>
           </div>
