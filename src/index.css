@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bg-with-overlay {
-    background-image: url('images/background_christmas.png');
+    background-image: url('assets/images/background_christmas.png');
     background-size: cover;
     background-position: center;
     position: relative;
