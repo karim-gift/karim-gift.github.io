@@ -11,7 +11,7 @@ export function ResultsPage({ userName, onRestart }: ResultsPageProps) {
   const [selectedShow, setSelectedShow] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-700 to-green-800 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-red-700 to-red-800 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-white mb-8">
           Joyeux Noël, {userName}! Tu peux aller voir un spectacle de ton choix
@@ -40,7 +40,7 @@ export function ResultsPage({ userName, onRestart }: ResultsPageProps) {
                     className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors flex items-center justify-center space-x-2"
                   >
                     <Play className="w-4 h-4" />
-                    <span>Select This Show</span>
+                    <span>Voir la bande annonce</span>
                   </button>
                   
                   {selectedShow === show.title && (
@@ -54,6 +54,14 @@ export function ResultsPage({ userName, onRestart }: ResultsPageProps) {
                       ></iframe>
                     </div>
                   )}
+                  <a
+                    href={show.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                  >
+                    Voir la fiche du spectacle
+                  </a>
                 </div>
               </div>
             </div>
